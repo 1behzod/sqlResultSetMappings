@@ -17,4 +17,10 @@ public class EmployeeDepartmentDTO {
     String employeeName;
 
     String departmentName;
+
+    public EmployeeDepartmentDTO(Long employeeId, String employeeName, String departmentName) {
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+        this.departmentName = departmentName;
+    }
 }
