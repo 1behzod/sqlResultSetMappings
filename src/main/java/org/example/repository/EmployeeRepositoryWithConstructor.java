@@ -16,8 +16,8 @@ public class EmployeeRepositoryWithConstructor {
 
     public List<EmployeeDepartmentDTO> getEmployeeDepartmentList() {
         String sql = "SELECT new org.example.dto.EmployeeDepartmentDTO(e.id, e.name, d.name) " +
-                "FROM Employee e " +
-                "JOIN e.department d ";
+                "      FROM Employee e " +
+                "      JOIN e.department d ";
         return entityManager.createQuery(sql, EmployeeDepartmentDTO.class)
                 .getResultList();
     }

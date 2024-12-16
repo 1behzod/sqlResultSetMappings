@@ -10,13 +10,16 @@ import java.util.List;
 @Repository
 public class EmployeeRepository {
 
+    //@SqlResultSetMapping
+
     @PersistenceContext
     EntityManager entityManager;
 
     public List<EmployeeDepartmentDTO> getList() {
         String sql = "SELECT e.id AS employee_id, e.name AS employee_name, d.name AS department_name " +
                 "FROM employee e " +
-                "JOIN department d ON e.department_id = d.id";
+                "JOIN department d ON e.department_id = d.id" +
+                "ORDER BY e.id ASC";
 
         return entityManager.createNativeQuery(sql, EmployeeDepartmentDTO.class).getResultList();
     }
