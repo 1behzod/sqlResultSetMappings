@@ -9,7 +9,7 @@ import java.util.List;
 
 @Repository
 public class EmployeeRepositoryWithConstructor {
-
+    //Simple but needs no change in constructor
     @PersistenceContext
     EntityManager entityManager;
 

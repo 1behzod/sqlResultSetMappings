@@ -12,6 +12,7 @@ import java.util.List;
 
 @Repository
 public class ListObject {
+    //the fastest but hand-made work and index based
     @PersistenceContext
     EntityManager entityManager;
 
@@ -22,7 +23,7 @@ public class ListObject {
         sql.append("e.name as employeeName, ");
         sql.append("d.name as departmentName ");
         sql.append("from Employee e ");
-        sql.append("join Department d on e.department_id = d.id ");
+        sql.append("join Department d    on e.department_id = d.id ");
         sql.append("where 1=1 ");
 
         if (dto.getEmployeeId() != null) {

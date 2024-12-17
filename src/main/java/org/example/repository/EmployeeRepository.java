@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public class EmployeeRepository {
 
-    //@SqlResultSetMapping
+    //@SqlResultSetMapping(multiple DTOs but nor high performance)
 
     @PersistenceContext
     EntityManager entityManager;
